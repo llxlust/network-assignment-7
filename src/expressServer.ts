@@ -5,6 +5,7 @@ const PORT = 3100
 
 app.get("/",(req,res)=>{
     const {firstName,lastName,month,date,year} = req.query
+    res.set('Content-Type', 'text/html');
     res.send(`<div><div>${firstName} ${lastName}</div><div>Login Date:${month} ${date},${year}</div></div>`)
 })
 
